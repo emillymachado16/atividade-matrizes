@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int lin = 0, col = 0, tam = 10, matriz1[tam][tam], matriz_aux[tam][tam];
+    
+    printf("Matriz: \n");
+    for(lin = 0; lin < tam; lin++){
+        for(col = 0; col < tam; col++){
+            if(lin == col){
+                matriz_aux[lin][col] = 3*(lin*lin)-1;
+                printf("%d", matriz_aux[lin][col]);
+                printf("  ");
+            }else if(lin<col){
+                matriz_aux[lin][col] = 2*lin + 7*col;
+                printf("%d", matriz_aux[lin][col]);
+                printf("  ");
+            }else if(lin>col){
+                matriz_aux[lin][col] = 4*(lin*lin*lin) - 5*(col*col);
+                printf("%d", matriz_aux[lin][col]);
+                printf("  ");
+            }
+            
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
