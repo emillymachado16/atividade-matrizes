@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int lin = 0, col = 0, tam = 4;
+    char matriz1[tam][tam], matriz_aux[tam][tam];
+    
+    printf("Matriz: \n");
+    for(lin = 0; lin < tam; lin++){
+        for(col = 0; col < tam; col++){
+            matriz_aux[lin][col] = lin*col; 
+            printf("%d", matriz_aux[lin][col]);
+            printf("  ");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
