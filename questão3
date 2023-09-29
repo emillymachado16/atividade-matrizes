@@ -1,0 +1,43 @@
+    #include <stdio.h>
+    
+    int main()
+    {
+    int taml, tamc, i, j, k, w, res;
+    int matriz[taml][tamc], matriz_aux[taml][tamc];
+    
+    printf("Informe a quantidade de linhas: ");
+    scanf("%i", &taml);
+    printf("Informe a quantidade de colunas: ");
+    scanf("%i", &tamc);
+    
+    printf("\nInforme a matriz: \n");
+    for(i = 0; i < taml; i++){
+        for(j= 0; j < tamc; j++){
+            scanf("%i", &matriz[i][j]);
+        }
+    }
+    
+    for(k = 0; k < taml; k++){
+        for(w = 0; w < tamc; w++){
+            matriz_aux[k][w] = matriz[k][w];
+    
+            for(i = 0; i < taml; i++){
+                for(j = 0; j < tamc; j++){
+                    if(matriz[i][j] == matriz_aux[i][j]){
+                        res++;
+                    }
+                }
+            }
+        }
+    }
+    
+    if(res < taml * tamc){
+        printf("\nResultado: Nao repete");
+    }else{
+        printf("\nResultado: Repete");
+    }
+    
+    return 0;
+    
+    }
+        
