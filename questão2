@@ -2,8 +2,7 @@
 
 int main()
 {
-    int lin = 0, col = 0, tam = 4;
-    char matriz1[tam][tam], matriz_aux[tam][tam];
+    int lin = 0, col = 0, tam = 4, matriz1[tam][tam], matriz_aux[tam][tam];
     
     printf("Matriz: \n");
     for(lin = 0; lin < tam; lin++){
