@@ -1,22 +1,23 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
     int lin = 0, col = 0, tam = 5;
-    char matriz1[tam][tam], matriz2[tam][tam];
+    char matriz1[tam][tam];
     
     printf("Matriz: \n");
     for(lin = 0; lin < tam; lin++){
         for(col = 0; col < tam; col++){
-            if(lin==col){
+            if(lin!=col){
+            matriz1[lin][col] = 0;
+            printf("%d", matriz1[lin][col]);
+            printf("  ");
+       }else{
             matriz1[lin][col] = 1;
             printf("%d", matriz1[lin][col]);
-       }else{
-            matriz2[lin][col] = 0;
-            printf("%d", matriz2[lin][col]);
-            printf("   ");
-        }   }
+            printf("  ");
+            }   
+        }
         printf("\n");
     }
     
