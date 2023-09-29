@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+
+int i, j, tam = 3, matriz[tam][tam], vetor[tam];
+
+printf("Informe a matriz: \n");
+for(i = 0; i < tam; i++){
+    for(j= 0; j < tam; j++){
+        scanf("%i", &matriz[i][j]);
+    }
+}
+
+for (j = 0; j < tam; j++) {
+    for (int i = 0; i < tam; i++) {
+        vetor[j] += matriz[i][j];
+    }
+}
+
+printf("\nResultado: ");
+for (i = 0; i < tam; i++) {
+    printf("%d, ", vetor[i]);
+}
+
+return 0;
+}
